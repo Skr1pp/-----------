@@ -1,0 +1,8 @@
+@use "normalize";
+@use "fonts";
+@use "variables"; // Обычно переменные подключают раньше
+@use "media"; // Медиа-миксины должны быть доступны везде
+@use "mixins" as *;
+@use "utils";
+@use "globals";
+@use "blocks/bloks";
