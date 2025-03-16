@@ -1,28 +1,33 @@
 :root {
-  --color-dark: #000000;
-  --color-dark-alt: #5e5e5e;
-  --color-light: #ffffff;
-  --color-azure: #0378fb;
-  --color-gray: #969696;
-  --color-gray-alt: #5e5e5e;
+  --color-dark: #262626;
+  --color-dark-alt: #898989;
+  --color-light: #f6ffd3;
+  --color-green: #53d94d;
 
-  --border: 1px solid var(--color-light);
-  --border-radius: 15px;
-  --border-radius-normal: 25px;
-  --border-radius-small: 7px;
+  --color-gray: #cbcbcb;
+  --color-white: #ffffff;
+
+  --border-light: 1px solid var(--color-light);
+  --border-dark: 1px solid var(--color-dark);
+  --box-shadow: 0px 0px 30px var(--color-green); // Усиленная тень при ховере
+  --box-shadow-gray: 0px 0px 40px var(--color-gray); // Усиленная тень при ховере
+
+  --border-radius-small: 15px;
+  --border-radius: 25px;
   --border-radius-large: 45px;
-
-  --shadow: 0 0 30px 0 var(--color-gray);
 
   --font-family-base: "Geist", sans-serif;
 
   --container-width: 1240px;
-  --container-padding-x: 20px;
+  --container-padding-x: 10px;
 
   --section-padding-y: 50px;
 
-  --input-height: 59px;
-  --button-height: 47px;
+  --input-height: 57px;
+
+  --button-height-small: 42px;
+  --button-height: 54px;
+  --button-height-large: 60px;
 
   --transition-duration: 0.2s;
 }

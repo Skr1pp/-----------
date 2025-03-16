@@ -1,0 +1,28 @@
+@use "sass:math";
+@use "../mixins" as *;
+@use "../media" as *;
+.level {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-light);
+
+  &__item {
+    background-color: var(--color-light);
+    border-radius: var(--border-radius-large);
+    flex-shrink: 0;
+    width: 350px;
+  }
+  &-name {
+    display: flex;
+
+    align-items: center;
+    padding-bottom: 20px;
+    gap: 20px;
+  }
+
+  &__text {
+    display: flex;
+    row-gap: 20px;
+    width: 290px;
+  }
+}

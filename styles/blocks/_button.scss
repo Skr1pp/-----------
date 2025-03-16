@@ -1,0 +1,29 @@
+@use "../mixins" as *;
+@use "../media" as *;
+.button {
+  @include flex-center(true);
+  height: var(--button-height-large);
+  padding: 22px 30px;
+  font-size: 18px;
+
+  @include desktop {
+    font-size: 18px;
+    height: var(--button-height);
+    padding: 10px 20px;
+  }
+  @include tablet {
+    font-size: 16px;
+    height: var(--button-height-small);
+    padding: 5px 10px;
+  }
+
+  border: var(--border);
+  border-radius: var(--border-radius);
+  background-color: var(--color-light);
+
+  @include hover {
+    border: none;
+    color: var(--color-light);
+    background-color: var(--color-green);
+  }
+}

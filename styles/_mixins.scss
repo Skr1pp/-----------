@@ -1,8 +1,17 @@
 @use "sass:math";
 
-@mixin fluid-text($max: 48, $min: 16) {
-  font-size: clamp(#{$min}px, #{math.div($max, 1440) * 100}vh, #{$max}px);
+@use "media";
+@mixin fluid-text($max: 80, $min: 16) {
+  font-size: clamp(#{$min}px, #{math.div($max, 1440) * 100}vw, #{$max}px);
 }
+
+// @mixin fluid-img($max-img: 730, $min-img: 430) {
+//   width: 100%;
+//   height: auto;
+//   max-height: #{$max-img}px;
+//   min-height: #{$min-img}px;
+//   object-fit: cover;
+// }
 
 @mixin reset-link {
   color: inherit;

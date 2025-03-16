@@ -3,19 +3,660 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>OpenEdu</title>
     <link rel="stylesheet" href="./styles/styles.css" />
   </head>
   <body>
-    <div class="bloks">
-      <div class="bloks__blok">
-        <span class="bloks__title">dfdf</span>
+    <header class="header">
+      <div class="header__inner container">
+        <a href="#" class="header__logo logo">
+          <img
+            class="header-logo__image"
+            src="./images/logo.svg"
+            alt="logo OpenEdu"
+            width="180"
+            height="40px"
+            loading="lazy"
+          />
+        </a>
+        <nav class="header__menu hidden-mobile">
+          <ul class="header__menu-list">
+            <li class="header__menu-item">
+              <a class="header__menu-link" href="">О нас</a>
+            </li>
+            <li class="header__menu-item">
+              <a class="header__menu-link" href="">Курсы</a>
+            </li>
+            <li class="header__menu-item">
+              <a class="header__menu-link" href="">Категории</a>
+            </li>
+            <li class="header__menu-item">
+              <a class="header__menu-link" href="">Отзывы</a>
+            </li>
+            <li class="header__menu-item">
+              <a class="header__menu-link" href="">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <button
+          class="header__button button button--transparent hidden-mobile"
+          type="button"
+        >
+          Перейти к курсам
+        </button>
+        <button
+          class="header__burger-button burger-button visible-mobile"
+          type="button"
+          onclick="mobileOverlay.showModal()"
+        >
+          <span class="visually-hidden">Open navigation menu</span>
+        </button>
       </div>
-    </div>
-    <div class="bloks">
-      <div class="bloks__blok">
-        <span class="bloks__title">dfdf</span>
+    </header>
+
+    <main class="container">
+      <section class="section container">
+        <div class="siction__body">
+          <div class="hero">
+            <div class="hero main">
+              <div class="hero__body">
+                <h1 class="hero__title">
+                  Бесплатные курсы программирования и дизайна.
+                </h1>
+                <p class="hero__text">
+                  Каталог бесплатных онлайн-курсов: изучай программирование,
+                  дизайн, маркетинг и многое другое без затрат!
+                </p>
+                <button class="hero__button button" type="button">
+                  НАЧАТЬ ОБУЧЕНИЕ
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="container">
+        <header class="section__header">
+          <div class="section__header-body">
+            <img
+              class="section__header-image"
+              src="/images/icon/star.svg"
+              alt=""
+              width="50"
+              height="50"
+              loading="lazy"
+            />
+            <h2 class="section__header-title">Уровни</h2>
+            <img
+              class="section__header-image"
+              src="/images/icon/star.svg"
+              alt=""
+              width="50"
+              height="50"
+              loading="lazy"
+            />
+          </div>
+          <p class="section__header-text">
+            Изучай новые профессии и навыки бесплатно.
+          </p>
+        </header>
+
+        <div class="section__body">
+          <div class="levels">
+            <ul class="levels__list grid grid--3">
+              <li class="levels__item">
+                <div class="levels-name">
+                  <h3 class="levels__title">Базовый</h3>
+                  <img
+                    class="header__image"
+                    src="/images/icon/star.svg"
+                    alt=""
+                    width="50"
+                    height="50"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="levels__description">
+                  <p>
+                    Доступ к полезным материалам, открытым лекциям и вебинарам.
+                    Можно изучать курсы самостоятельно без домашних заданий и
+                    ограничений.
+                  </p>
+                </div>
+                <a class="levels__link" href="/">
+                  <span>Смотреть курс</span>
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 21 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1.25 13.701C0.532561 14.1152 0.286748 15.0326 0.700962 15.75C1.11518 16.4674 2.03256 16.7133 2.75 16.299L1.25 13.701ZM20.7694 5.38823C20.9838 4.58803 20.5089 3.76552 19.7087 3.55111L6.66874 0.0570541C5.86854 -0.157359 5.04603 0.317515 4.83162 1.11771C4.61721 1.91791 5.09208 2.74042 5.89228 2.95483L17.4834 6.06066L14.3776 17.6518C14.1631 18.452 14.638 19.2745 15.4382 19.4889C16.2384 19.7033 17.0609 19.2284 17.2753 18.4282L20.7694 5.38823ZM2.75 16.299L20.0705 6.29904L18.5705 3.70096L1.25 13.701L2.75 16.299Z"
+                      fill="#53D94D"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li class="levels__item">
+                <div class="levels-name">
+                  <h3 class="levels__title">Стандарт</h3>
+                  <img
+                    class="header__image"
+                    src="/images/icon/star2.svg"
+                    alt=""
+                  />
+                </div>
+                <div class="levels__description">
+                  <p>
+                    Доступ к полезным материалам, открытым лекциям и вебинарам.
+                    Можно изучать курсы самостоятельно без домашних заданий и
+                    ограничений.
+                  </p>
+                </div>
+                <a class="levels__link" href="/">
+                  <span>Смотреть курс</span>
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 21 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1.25 13.701C0.532561 14.1152 0.286748 15.0326 0.700962 15.75C1.11518 16.4674 2.03256 16.7133 2.75 16.299L1.25 13.701ZM20.7694 5.38823C20.9838 4.58803 20.5089 3.76552 19.7087 3.55111L6.66874 0.0570541C5.86854 -0.157359 5.04603 0.317515 4.83162 1.11771C4.61721 1.91791 5.09208 2.74042 5.89228 2.95483L17.4834 6.06066L14.3776 17.6518C14.1631 18.452 14.638 19.2745 15.4382 19.4889C16.2384 19.7033 17.0609 19.2284 17.2753 18.4282L20.7694 5.38823ZM2.75 16.299L20.0705 6.29904L18.5705 3.70096L1.25 13.701L2.75 16.299Z"
+                      fill="#53D94D"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li class="levels__item">
+                <div class="levels-name">
+                  <h3 class="levels__title">Премиум</h3>
+                  <img
+                    class="header__image"
+                    src="/images/icon/star3.svg"
+                    alt=""
+                  />
+                </div>
+                <div class="levels__description">
+                  <p>
+                    Доступ к полезным материалам, открытым лекциям и вебинарам.
+                    Можно изучать курсы самостоятельно без домашних заданий и
+                    ограничений.
+                  </p>
+                </div>
+                <a class="levels__link" href="/">
+                  <span>Смотреть курс</span>
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 21 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1.25 13.701C0.532561 14.1152 0.286748 15.0326 0.700962 15.75C1.11518 16.4674 2.03256 16.7133 2.75 16.299L1.25 13.701ZM20.7694 5.38823C20.9838 4.58803 20.5089 3.76552 19.7087 3.55111L6.66874 0.0570541C5.86854 -0.157359 5.04603 0.317515 4.83162 1.11771C4.61721 1.91791 5.09208 2.74042 5.89228 2.95483L17.4834 6.06066L14.3776 17.6518C14.1631 18.452 14.638 19.2745 15.4382 19.4889C16.2384 19.7033 17.0609 19.2284 17.2753 18.4282L20.7694 5.38823ZM2.75 16.299L20.0705 6.29904L18.5705 3.70096L1.25 13.701L2.75 16.299Z"
+                      fill="#53D94D"
+                    />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="container">
+        <header class="section__header">
+          <div class="section__header-body">
+            <img
+              class="section__header-image"
+              src="/images/icon/star3.svg"
+              alt=""
+            />
+            <h2 class="section__header-title">Курсы</h2>
+            <img
+              class="section__header-image"
+              src="/images/icon/star3.svg"
+              alt=""
+            />
+          </div>
+          <p class="section__header-text">
+            Найди курс, который подходит именно тебе.
+          </p>
+        </header>
+
+        <div class="section__body">
+          <div class="courses">
+            <ul class="courses__list grid grid--2">
+              <li class="courses__item">
+                <article class="courses-card">
+                  <div class="courses-card__body">
+                    <h3 class="courses-card__title">
+                      <span class="puddle-bg">Backend</span>
+                      <span class="puddle-bg">Development</span>
+                    </h3>
+                    <a class="courses-card__link" href="">
+                      <span class="courses-card__link-label">
+                        Смотреть курс
+                      </span>
+                      <span class="courses-card__link-icon-wrapper">
+                        <svg
+                          width="21"
+                          height="21"
+                          viewBox="0 0 21 21"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M1.25 13.701C0.532561 14.1152 0.286748 15.0326 0.700962 15.75C1.11518 16.4674 2.03256 16.7133 2.75 16.299L1.25 13.701ZM20.7694 5.38823C20.9838 4.58803 20.5089 3.76552 19.7087 3.55111L6.66874 0.0570541C5.86854 -0.157359 5.04603 0.317515 4.83162 1.11771C4.61721 1.91791 5.09208 2.74042 5.89228 2.95483L17.4834 6.06066L14.3776 17.6518C14.1631 18.452 14.638 19.2745 15.4382 19.4889C16.2384 19.7033 17.0609 19.2284 17.2753 18.4282L20.7694 5.38823ZM2.75 16.299L20.0705 6.29904L18.5705 3.70096L1.25 13.701L2.75 16.299Z"
+                            fill="#53D94D"
+                          />
+                        </svg>
+                      </span>
+                    </a>
+                  </div>
+                  <img
+                    src="./images/services/1.svg"
+                    alt=""
+                    class="courses-card__image"
+                    width="210"
+                    height="170"
+                    loading="lazy"
+                  />
+                </article>
+              </li>
+              <li class="courses__item">
+                <article class="courses-card courses-card--green-bg">
+                  <div class="courses-card__body">
+                    <h3 class="courses-card__title">
+                      <span class="puddle-bg puddle-bg--light">Backend</span>
+                      <span class="puddle-bg puddle-bg--light"
+                        >Development</span
+                      >
+                    </h3>
+                    <a class="courses-card__link" href="">
+                      <span class="courses-card__link-label">
+                        Смотреть курс
+                      </span>
+                      <span class="courses-card__link-icon-wrapper">
+                        <svg
+                          width="21"
+                          height="21"
+                          viewBox="0 0 21 21"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M1.25 13.701C0.532561 14.1152 0.286748 15.0326 0.700962 15.75C1.11518 16.4674 2.03256 16.7133 2.75 16.299L1.25 13.701ZM20.7694 5.38823C20.9838 4.58803 20.5089 3.76552 19.7087 3.55111L6.66874 0.0570541C5.86854 -0.157359 5.04603 0.317515 4.83162 1.11771C4.61721 1.91791 5.09208 2.74042 5.89228 2.95483L17.4834 6.06066L14.3776 17.6518C14.1631 18.452 14.638 19.2745 15.4382 19.4889C16.2384 19.7033 17.0609 19.2284 17.2753 18.4282L20.7694 5.38823ZM2.75 16.299L20.0705 6.29904L18.5705 3.70096L1.25 13.701L2.75 16.299Z"
+                            fill="#53D94D"
+                          />
+                        </svg>
+                      </span>
+                    </a>
+                  </div>
+                  <img
+                    src="./images/services/2.svg"
+                    alt=""
+                    class="courses-card__image"
+                    width="210"
+                    height="170"
+                    loading="lazy"
+                  />
+                </article>
+              </li>
+              <li class="courses__item">
+                <article class="courses-card courses-card--dark-bg">
+                  <div class="courses-card__body">
+                    <h3 class="courses-card__title">
+                      <span class="puddle-bg">Backend</span>
+                      <span class="puddle-bg">Development</span>
+                    </h3>
+                    <a
+                      class="courses-card__link courses-card__link-light"
+                      href=""
+                    >
+                      <span class="courses-card__link-label">
+                        Смотреть курс
+                      </span>
+                      <span class="courses-card__link-icon-wrapper">
+                        <svg
+                          width="21"
+                          height="21"
+                          viewBox="0 0 21 21"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M1.25 13.701C0.532561 14.1152 0.286748 15.0326 0.700962 15.75C1.11518 16.4674 2.03256 16.7133 2.75 16.299L1.25 13.701ZM20.7694 5.38823C20.9838 4.58803 20.5089 3.76552 19.7087 3.55111L6.66874 0.0570541C5.86854 -0.157359 5.04603 0.317515 4.83162 1.11771C4.61721 1.91791 5.09208 2.74042 5.89228 2.95483L17.4834 6.06066L14.3776 17.6518C14.1631 18.452 14.638 19.2745 15.4382 19.4889C16.2384 19.7033 17.0609 19.2284 17.2753 18.4282L20.7694 5.38823ZM2.75 16.299L20.0705 6.29904L18.5705 3.70096L1.25 13.701L2.75 16.299Z"
+                            fill="#53D94D"
+                          />
+                        </svg>
+                      </span>
+                    </a>
+                  </div>
+                  <img
+                    src="./images/services/3.svg"
+                    alt=""
+                    class="courses-card__image"
+                    width="210"
+                    height="170"
+                    loading="lazy"
+                  />
+                </article>
+              </li>
+              <li class="courses__item">
+                <article class="courses-card">
+                  <div class="courses-card__body">
+                    <h3 class="courses-card__title">
+                      <span class="puddle-bg">Backend</span>
+                      <span class="puddle-bg">Development</span>
+                    </h3>
+                    <a class="courses-card__link" href="">
+                      <span class="courses-card__link-label">
+                        Смотреть курс
+                      </span>
+                      <span class="courses-card__link-icon-wrapper">
+                        <svg
+                          width="21"
+                          height="21"
+                          viewBox="0 0 21 21"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M1.25 13.701C0.532561 14.1152 0.286748 15.0326 0.700962 15.75C1.11518 16.4674 2.03256 16.7133 2.75 16.299L1.25 13.701ZM20.7694 5.38823C20.9838 4.58803 20.5089 3.76552 19.7087 3.55111L6.66874 0.0570541C5.86854 -0.157359 5.04603 0.317515 4.83162 1.11771C4.61721 1.91791 5.09208 2.74042 5.89228 2.95483L17.4834 6.06066L14.3776 17.6518C14.1631 18.452 14.638 19.2745 15.4382 19.4889C16.2384 19.7033 17.0609 19.2284 17.2753 18.4282L20.7694 5.38823ZM2.75 16.299L20.0705 6.29904L18.5705 3.70096L1.25 13.701L2.75 16.299Z"
+                            fill="#53D94D"
+                          />
+                        </svg>
+                      </span>
+                    </a>
+                  </div>
+                  <img
+                    src="./images/services/4.svg"
+                    alt=""
+                    class="courses-card__image"
+                    width="210"
+                    height="170"
+                    loading="lazy"
+                  />
+                </article>
+              </li>
+              <li class="courses__item">
+                <article class="courses-card courses-card--green-bg">
+                  <div class="courses-card__body">
+                    <h3 class="courses-card__title">
+                      <span class="puddle-bg puddle-bg--light">Backend</span>
+                      <span class="puddle-bg puddle-bg--light">
+                        Development
+                      </span>
+                    </h3>
+                    <a class="courses-card__link" href="">
+                      <span class="courses-card__link-label">
+                        Смотреть курс
+                      </span>
+                      <span class="courses-card__link-icon-wrapper">
+                        <svg
+                          width="21"
+                          height="21"
+                          viewBox="0 0 21 21"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M1.25 13.701C0.532561 14.1152 0.286748 15.0326 0.700962 15.75C1.11518 16.4674 2.03256 16.7133 2.75 16.299L1.25 13.701ZM20.7694 5.38823C20.9838 4.58803 20.5089 3.76552 19.7087 3.55111L6.66874 0.0570541C5.86854 -0.157359 5.04603 0.317515 4.83162 1.11771C4.61721 1.91791 5.09208 2.74042 5.89228 2.95483L17.4834 6.06066L14.3776 17.6518C14.1631 18.452 14.638 19.2745 15.4382 19.4889C16.2384 19.7033 17.0609 19.2284 17.2753 18.4282L20.7694 5.38823ZM2.75 16.299L20.0705 6.29904L18.5705 3.70096L1.25 13.701L2.75 16.299Z"
+                            fill="#53D94D"
+                          />
+                        </svg>
+                      </span>
+                    </a>
+                  </div>
+                  <img
+                    src="./images/services/5.svg"
+                    alt=""
+                    class="courses-card__image"
+                    width="210"
+                    height="170"
+                    loading="lazy"
+                  />
+                </article>
+              </li>
+              <li class="courses__item">
+                <article class="courses-card courses-card--dark-bg">
+                  <div class="courses-card__body">
+                    <h3 class="courses-card__title">
+                      <span class="puddle-bg">Backend</span>
+                      <span class="puddle-bg">Development</span>
+                    </h3>
+                    <a
+                      class="courses-card__link courses-card__link-light"
+                      href=""
+                    >
+                      <span class="courses-card__link-label">
+                        Смотреть курс
+                      </span>
+                      <span class="courses-card__link-icon-wrapper">
+                        <svg
+                          width="21"
+                          height="21"
+                          viewBox="0 0 21 21"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M1.25 13.701C0.532561 14.1152 0.286748 15.0326 0.700962 15.75C1.11518 16.4674 2.03256 16.7133 2.75 16.299L1.25 13.701ZM20.7694 5.38823C20.9838 4.58803 20.5089 3.76552 19.7087 3.55111L6.66874 0.0570541C5.86854 -0.157359 5.04603 0.317515 4.83162 1.11771C4.61721 1.91791 5.09208 2.74042 5.89228 2.95483L17.4834 6.06066L14.3776 17.6518C14.1631 18.452 14.638 19.2745 15.4382 19.4889C16.2384 19.7033 17.0609 19.2284 17.2753 18.4282L20.7694 5.38823ZM2.75 16.299L20.0705 6.29904L18.5705 3.70096L1.25 13.701L2.75 16.299Z"
+                            fill="#53D94D"
+                          />
+                        </svg>
+                      </span>
+                    </a>
+                  </div>
+                  <img
+                    src="./images/services/6.svg"
+                    alt=""
+                    class="courses-card__image"
+                    width="210"
+                    height="170"
+                    loading="lazy"
+                  />
+                </article>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="container">
+        <header class="section__header">
+          <div class="section__header-body-feature">
+            <h2 class="section__header-title-feature h3">Инновации</h2>
+            <img
+              class="section__header-image-feature"
+              src="/images/icon/star3.svg"
+              alt=""
+            />
+            <h2 class="section__header-title-feature h3">Вдохновлять</h2>
+            <img
+              class="section__header-image-feature"
+              src="/images/icon/star3.svg"
+              alt=""
+            />
+            <h2 class="section__header-title-feature h3">Создавать</h2>
+          </div>
+        </header>
+        <div class="section_body">
+          <div class="about">
+            <ol class="about__list">
+              <li class="about__item">
+                <details class="about__accordion" open>
+                  <summary class="about__accordion-header">
+                    <h3 class="about__accordion-title">Как мы работаем</h3>
+                    <span class="about__accordion-indicator"></span>
+                  </summary>
+                  <div class="about__accordion-body">
+                    <p>
+                      Мы тщательно отбираем курсы, анализируем их качество и
+                      удобство подачи материала. Наша платформа помогает быстро
+                      находить подходящие курсы и экономит ваше время на поиске
+                      информации.
+                    </p>
+                  </div>
+                </details>
+              </li>
+              <li class="about__item">
+                <details class="about__accordion">
+                  <summary class="about__accordion-header">
+                    <h3 class="about__accordion-title">Как мы работаем</h3>
+                    <span class="about__accordion-indicator"></span>
+                  </summary>
+                  <div class="about__accordion-body">
+                    <p>
+                      Мы тщательно отбираем курсы, анализируем их качество и
+                      удобство подачи материала. Наша платформа помогает быстро
+                      находить подходящие курсы и экономит ваше время на поиске
+                      информации.
+                    </p>
+                  </div>
+                </details>
+              </li>
+              <li class="about__item">
+                <details class="about__accordion">
+                  <summary class="about__accordion-header">
+                    <h3 class="about__accordion-title">Как мы работаем</h3>
+                    <span class="about__accordion-indicator"></span>
+                  </summary>
+                  <div class="about__accordion-body">
+                    <p>
+                      Мы тщательно отбираем курсы, анализируем их качество и
+                      удобство подачи материала. Наша платформа помогает быстро
+                      находить подходящие курсы и экономит ваше время на поиске
+                      информации.
+                    </p>
+                  </div>
+                </details>
+              </li>
+              <li class="about__item">
+                <details class="about__accordion">
+                  <summary class="about__accordion-header">
+                    <h3 class="about__accordion-title">Как мы работаем</h3>
+                    <span class="about__accordion-indicator"></span>
+                  </summary>
+                  <div class="about__accordion-body">
+                    <p>
+                      Мы тщательно отбираем курсы, анализируем их качество и
+                      удобство подачи материала. Наша платформа помогает быстро
+                      находить подходящие курсы и экономит ваше время на поиске
+                      информации.
+                    </p>
+                  </div>
+                </details>
+              </li>
+              <li class="about__item">
+                <details class="about__accordion">
+                  <summary class="about__accordion-header">
+                    <h3 class="about__accordion-title">Как мы работаем</h3>
+                    <span class="about__accordion-indicator"></span>
+                  </summary>
+                  <div class="about__accordion-body">
+                    <p>
+                      Мы тщательно отбираем курсы, анализируем их качество и
+                      удобство подачи материала. Наша платформа помогает быстро
+                      находить подходящие курсы и экономит ваше время на поиске
+                      информации.
+                    </p>
+                  </div>
+                </details>
+              </li>
+              <li class="about__item">
+                <details class="about__accordion">
+                  <summary class="about__accordion-header">
+                    <h3 class="about__accordion-title">Как мы работаем</h3>
+                    <span class="about__accordion-indicator"></span>
+                  </summary>
+                  <div class="about__accordion-body">
+                    <p>
+                      Мы тщательно отбираем курсы, анализируем их качество и
+                      удобство подачи материала. Наша платформа помогает быстро
+                      находить подходящие курсы и экономит ваше время на поиске
+                      информации.
+                    </p>
+                  </div>
+                </details>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <section class="container">
+        <header class="section__header">
+          <div class="section__header-body">
+            <img
+              class="section__header-image"
+              src="/images/icon/star.svg"
+              alt=""
+            />
+            <h2 class="section__header-title">Отзывы</h2>
+            <img
+              class="section__header-image"
+              src="/images/icon/star.svg"
+              alt=""
+            />
+          </div>
+          <p class="section__header-text">
+            Реальные отзывы от тех, кто уже учится бесплатно.
+          </p>
+        </header>
+        <div class="section__body">
+          <div class="reviews">
+            <ul class="reviews__list">
+              <li class="reviews__item">
+                <div class="reviews__body">
+                  <p>
+                    "We have been working with Positivus for the past year and
+                    have seen a significant increase in website traffic and
+                    leads as a result of their efforts. The team is
+                    professional, responsive, and truly cares about the success
+                    of our business. We highly recommend Positivus to any
+                    company looking to grow their online presence."
+                  </p>
+                  <strong class="reviews__user-name">John Smith</strong>
+                  <p>Marketing Director at XYZ Corp</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+    <dialog class="mobile-overlay visible-mobile" id="mobileOverlay">
+      <form class="mobile-overlay__close-button-wrapper" method="dialog">
+        <button class="mobile-overlay__close-button cross-button" type="submit">
+          <span class="visually-hidden">Close navigation menu</span>
+        </button>
+      </form>
+      <div class="mobile-overlay__body">
+        <ul class="mobile-overlay__list">
+          <li class="mobile-overlay__item">
+            <a class="mobile-overlay__link" href="/">О нас</a>
+          </li>
+          <li class="mobile-overlay__item">
+            <a class="mobile-overlay__link" href="/">Курсы</a>
+          </li>
+          <li class="mobile-overlay__item">
+            <a class="mobile-overlay__link" href="/">Категории</a>
+          </li>
+          <li class="mobile-overlay__item">
+            <a class="mobile-overlay__link" href="/">Отзывы</a>
+          </li>
+          <li class="mobile-overlay__item">
+            <a class="mobile-overlay__link" href="/">Контакты</a>
+          </li>
+        </ul>
       </div>
-    </div>
+    </dialog>
   </body>
 </html>

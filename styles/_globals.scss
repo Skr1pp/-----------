@@ -1,12 +1,46 @@
 @use "mixins" as *;
+@use "media" as *;
 body {
   @include fluid-text(18, 16);
+  position: relative;
 
   font-family: var(--font-family-base);
   font-weight: 400;
   line-height: 1.28;
   color: var(--color-dark);
   background-color: var(--color-light);
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 730px;
+
+  background-image: url("/images/header-bg.svg");
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  border: 20px solid var(--color-light);
+  border-radius: var(--border-radius-large);
+  overflow-x: hidden;
+  @include desktop {
+    border: 15px solid var(--color-light);
+    border-radius: var(--border-radius-large);
+    height: 630px;
+  }
+  @include tablet {
+    border: 10px solid var(--color-light);
+    border-radius: var(--border-radius-large);
+    height: 540px;
+  }
+  @include mobile {
+    border: 10px solid var(--color-light);
+    border-radius: var(--border-radius-large);
+    height: 500px;
+  }
 }
 
 a,
@@ -31,7 +65,7 @@ h4 {
 
 h1,
 .h1 {
-  @include fluid-text(60, 43);
+  @include fluid-text(80, 43);
 }
 
 h2,

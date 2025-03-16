@@ -1,0 +1,102 @@
+@use "sass:math";
+@use "../mixins" as *;
+@use "../media" as *;
+.about {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    counter-reset: custom-counter;
+    list-style: none;
+
+    @include mobile {
+      row-gap: 20px;
+    }
+  }
+
+  &__item {
+    --counterContent: counter(custom-counter);
+
+    counter-increment: custom-counter;
+
+    &:nth-child(-n + 9) {
+      --counterContent: "0" counter(custom-counter);
+    }
+  }
+  &__accordion {
+    padding: 40px 60px;
+    background-color: var(--color-light);
+    border-radius: var(--border-radius-large);
+    box-shadow: var(--box-shadow-gray);
+    // border: var(--border);
+    transition-duration: var(--transition-duration);
+    @include mobile {
+      padding: 30px;
+    }
+    @include hover {
+      box-shadow: var(--box-shadow);
+    }
+
+    &[open] {
+      background-color: var(--color-green);
+    }
+
+    &-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      row-gap: 40px;
+      cursor: pointer;
+      user-select: none;
+
+      @include mobile {
+        column-gap: 39px;
+      }
+    }
+    &-title {
+      @include fluid-text(30, 18);
+      display: flex;
+      align-items: center;
+      column-gap: 20px;
+
+      @include mobile {
+        column-gap: 25px;
+      }
+      &::before {
+        content: var(--counterContent);
+        font-size: 2em;
+        @include mobile {
+          font-size: 30px;
+        }
+      }
+    }
+
+    &-indicator {
+      @include flex-center;
+      @include square(58px);
+      background-color: var(--color-green);
+      border-radius: 50%;
+      box-shadow: var(--box-shadow-light);
+      background-image: url("/images/icon/arrow-top.svg");
+      background-size: 50%; // Чтобы картинка полностью влезла
+      background-repeat: no-repeat;
+      background-position: center; // Центрируем
+      transition-duration: 0.8s;
+
+      @include mobile {
+        @include square(48px);
+      }
+      .about__accordion[open] & {
+        background-color: var(--color-light);
+        transition-duration: 0.8s;
+        transform: rotate(540deg);
+      }
+    }
+
+    &-body {
+      margin-top: 30px;
+      padding-top: 30px;
+      border-top: var(--border-dark);
+    }
+  }
+}
