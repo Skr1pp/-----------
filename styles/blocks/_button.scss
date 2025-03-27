@@ -6,6 +6,10 @@
   padding: 22px 30px;
   font-size: 18px;
 
+  border: var(--border);
+  border-radius: var(--border-radius);
+  background-color: var(--color-light);
+
   @include desktop {
     font-size: 18px;
     height: var(--button-height);
@@ -16,10 +20,6 @@
     height: var(--button-height-small);
     padding: 5px 10px;
   }
-
-  border: var(--border);
-  border-radius: var(--border-radius);
-  background-color: var(--color-light);
 
   @include hover {
     border: none;

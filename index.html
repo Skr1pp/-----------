@@ -76,7 +76,7 @@
         </div>
       </section>
 
-      <section class="container">
+      <section class="section container">
         <header class="section__header">
           <div class="section__header-body">
             <img
@@ -209,7 +209,7 @@
         </div>
       </section>
 
-      <section class="container">
+      <section class="section container">
         <header class="section__header">
           <div class="section__header-body">
             <img
@@ -233,6 +233,10 @@
           <div class="courses">
             <ul class="courses__list grid grid--2">
               <li class="courses__item">
+                <!-- Когда использовать <article>?
+Статьи, новости, блоговые посты – если контент имеет смысл сам по себе.
+Отзывы, карточки товаров, форумы – если это отдельные записи.
+Виджеты, ленты новостей – если каждый элемент является отдельным блоком информации. -->
                 <article class="courses-card">
                   <div class="courses-card__body">
                     <h3 class="courses-card__title">
@@ -469,7 +473,7 @@
         </div>
       </section>
 
-      <section class="container">
+      <section class="section container">
         <header class="section__header">
           <div class="section__header-body-feature">
             <h2 class="section__header-title-feature h3">Инновации</h2>
@@ -591,7 +595,7 @@
         </div>
       </section>
 
-      <section class="container">
+      <section class="section container">
         <header class="section__header">
           <div class="section__header-body">
             <img
@@ -612,7 +616,36 @@
         </header>
         <div class="section__body">
           <div class="reviews">
-            <ul class="reviews__list">
+            <div class="reviews__star"></div>
+            <ul class="reviews__list grid grid--3">
+              <li class="reviews__item">
+                <div class="reviews__body">
+                  <p class="reviews__text">
+                    "We have been working with Positivus for the past year and
+                    have seen a significant increase in website traffic and
+                    leads as a result of their efforts. The team is
+                    professional, responsive, and truly cares about the success
+                    of our business. We highly recommend Positivus to any
+                    company looking to grow their online presence."
+                  </p>
+                  <strong class="reviews__user-name">John Smith</strong>
+                  <p>Marketing Director at XYZ Corp</p>
+                </div>
+              </li>
+              <li class="reviews__item">
+                <div class="reviews__body">
+                  <p>
+                    "We have been working with Positivus for the past year and
+                    have seen a significant increase in website traffic and
+                    leads as a result of their efforts. The team is
+                    professional, responsive, and truly cares about the success
+                    of our business. We highly recommend Positivus to any
+                    company looking to grow their online presence."
+                  </p>
+                  <strong class="reviews__user-name">John Smith</strong>
+                  <p>Marketing Director at XYZ Corp</p>
+                </div>
+              </li>
               <li class="reviews__item">
                 <div class="reviews__body">
                   <p>
@@ -631,7 +664,139 @@
           </div>
         </div>
       </section>
+
+      <section class="section container">
+        <header class="section__header">
+          <div class="section__header-body">
+            <img
+              class="section__header-image"
+              src="/images/icon/star3.svg"
+              alt=""
+            />
+            <h2 class="section__header-title-feature">Контакты</h2>
+            <img
+              class="section__header-image"
+              src="/images/icon/star3.svg"
+              alt=""
+            />
+          </div>
+          <p class="section__header-text">
+            Свяжись с нами, если у тебя есть<br />
+            вопросы или предложения.
+          </p>
+        </header>
+
+        <div class="section__body">
+          <div class="contact-us">
+            <form class="contact-us__form">
+              <div class="contact-us__body">
+                <div class="contact-us__feild field">
+                  <input
+                    id="name"
+                    class="field__input"
+                    name="name"
+                    placeholder="Name"
+                  />
+                </div>
+                <div class="contact-us__feild field">
+                  <input
+                    id="email"
+                    class="field__input"
+                    name="email"
+                    placeholder="Email"
+                    type="email"
+                    required
+                  />
+                </div>
+                <div class="contact-us__feild field">
+                  <textarea
+                    id="message"
+                    class="field__input field__input--textarea"
+                    email="message"
+                    placeholder="Message"
+                    required
+                  ></textarea>
+                </div>
+              </div>
+              <button class="contact-us__button button" type="submit">
+                Отправить сообщение
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
     </main>
+
+    <footer class="footer container">
+      <div class="footer__inner">
+        <div class="footer__navigation">
+          <a href="#" class="footer__logo logo">
+            <img
+              class="footer-logo__image"
+              src="./images/logo.svg"
+              alt="logo OpenEdu"
+              width="180"
+              height="40px"
+              loading="lazy"
+            />
+          </a>
+          <nav class="footer__menu">
+            <ul class="footer__menu-list">
+              <li class="footer__menu-item">
+                <a class="footer__menu-link" href="">О нас</a>
+              </li>
+              <li class="footer__menu-item">
+                <a class="footer__menu-link" href="">Курсы</a>
+              </li>
+              <li class="footer__menu-item">
+                <a class="footer__menu-link" href="">Категории</a>
+              </li>
+              <li class="footer__menu-item">
+                <a class="footer__menu-link" href="">Отзывы</a>
+              </li>
+              <li class="footer__menu-item">
+                <a class="footer__menu-link" href="">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="footer__body">
+          <div class="footer__contacts">
+            <h3 class="footer__contacts-title">Контакты:</h3>
+            <address class="footer__contacts-body">
+              <p>
+                Email: <a href="mailto:info@openedu.com">info@openedu.com</a>
+              </p>
+              <p>Phone: <a href="tel:8884441111">888-444-1111</a></p>
+              <p>
+                Address: 1234 Алматы<br />
+                Город, Регион 12345678910
+              </p>
+            </address>
+          </div>
+          <form class="footer__subscribe-form subscribe-form">
+            <h2 class="visually-hidden">Subscription</h2>
+            <div class="subscribe-form__field field">
+              <input
+                id="email"
+                class="field__input-footer"
+                name="email"
+                placeholder="Email"
+                type="email"
+                required
+              />
+            </div>
+            <button class="subscribe-form__button button" type="submit">
+              Подписаться
+            </button>
+          </form>
+        </div>
+        <div class="footer__extra">
+          <p>© <time datetime="2025">2025</time> OpenEdu</p>
+          <a class="footer__privacy-policy-link" href="/">Privacy Policy</a>
+        </div>
+      </div>
+    </footer>
     <dialog class="mobile-overlay visible-mobile" id="mobileOverlay">
       <form class="mobile-overlay__close-button-wrapper" method="dialog">
         <button class="mobile-overlay__close-button cross-button" type="submit">

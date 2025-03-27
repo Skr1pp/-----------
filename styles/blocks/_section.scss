@@ -1,7 +1,8 @@
 @use "../mixins" as *;
 @use "../media" as *;
 .section {
-  padding-block: var(--section-padding-y);
+  padding-block: var(--section-padding-y) !important;
+  padding-inline: 0 !important;
 
   // &--hidden-x{
   //   overflow-x: hidden;
@@ -12,7 +13,7 @@
     flex-direction: column;
     align-items: center;
     row-gap: 20px;
-    padding-block: var(--section-padding-y);
+    padding-bottom: 50px;
 
     &-title {
       color: var(--color-green);

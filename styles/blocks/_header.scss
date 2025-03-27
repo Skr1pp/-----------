@@ -12,6 +12,8 @@
   }
 
   &__logo {
+    width: 180px;
+    height: 40px;
     @include desktop {
       width: 120px;
     }

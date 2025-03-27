@@ -1,3 +1,88 @@
 @use "sass:math";
 @use "../mixins" as *;
 @use "../media" as *;
+.reviews {
+  align-items: center;
+  padding: 75px 80px;
+  background-color: var(--color-dark);
+  border-radius: var(--border-radius-large);
+  color: var(--color-light);
+  position: relative;
+
+  &::after,
+  &::before {
+    position: absolute;
+    content: "";
+
+    width: 130px;
+    height: 130px;
+
+    background-repeat: no-repeat; /* Отключает повторение */
+    background-size: contain;
+  }
+
+  &::before {
+    background-image: url("/images/icon/star.svg");
+    transform: translate(330%, -50%);
+    @include tablet {
+      transform: translate(230%, 130%);
+    }
+    @include mobile {
+      transform: translate(130%, 230px);
+    }
+  }
+
+  &::after {
+    background-image: url("/images/icon/star4.svg");
+    transform: translate(570%, -55%);
+
+    @include tablet {
+      transform: translate(370%, -55%);
+    }
+    @include mobile {
+      transform: translate(150%, -70%);
+    }
+  }
+  &__star {
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    background-image: url("/images/icon/star3.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: translate(70%, -45%);
+    transform: rotate(45deg);
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    @include tablet {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  @include mobile {
+    padding: 60px 30px;
+  }
+
+  &__item {
+    z-index: 5;
+
+    display: flex;
+    padding: 30px 20px;
+    @include fluid-text(18, 16);
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: var(--border-radius-small);
+    border: var(--border-light);
+  }
+
+  &__user-name {
+    @include fluid-text(20, 18);
+  }
+  &__body p:first-child {
+    margin-bottom: 20px;
+  }
+  &__user-name {
+    color: var(--color-green);
+  }
+}

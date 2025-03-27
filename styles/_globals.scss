@@ -17,7 +17,7 @@ body::before {
   top: 0;
   left: 0;
   width: 100%;
-  height: 730px;
+  height: 830px;
 
   background-image: url("/images/header-bg.svg");
   background-size: cover;
@@ -29,7 +29,7 @@ body::before {
   @include desktop {
     border: 15px solid var(--color-light);
     border-radius: var(--border-radius-large);
-    height: 630px;
+    height: 730px;
   }
   @include tablet {
     border: 10px solid var(--color-light);
@@ -39,7 +39,7 @@ body::before {
   @include mobile {
     border: 10px solid var(--color-light);
     border-radius: var(--border-radius-large);
-    height: 500px;
+    height: 480px;
   }
 }
 

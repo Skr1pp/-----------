@@ -1,0 +1,46 @@
+@use "sass:math";
+@use "../mixins" as *;
+@use "../media" as *;
+.field {
+  align-items: start;
+  row-gap: 30px;
+  @include mobile {
+    row-gap: 20px;
+  }
+
+  &__input {
+    all: unset;
+
+    @include fluid-text(18, 16);
+    width: 100%;
+    height: var(--input-height);
+    padding-inline: 0;
+    border-bottom: var(--border-dark);
+
+    word-wrap: break-word; // Перенос слов внутри textarea
+    overflow-wrap: break-word; // Переносит длинные слова
+    white-space: pre-wrap; // Сохраняет переносы строк
+    resize: none; // Убирает изменение размера (если не надо)
+    &-footer {
+      all: unset;
+
+      @include fluid-text(18, 16);
+      height: 60px;
+      padding-inline: 0;
+      border-bottom: var(--border-light);
+
+      word-wrap: break-word; // Перенос слов внутри textarea
+      overflow-wrap: break-word; // Переносит длинные слова
+      white-space: pre-wrap; // Сохраняет переносы строк
+      resize: none; // Убирает изменение размера (если не надо)
+      width: 100%;
+    }
+    @include mobile {
+      height: 80px;
+    }
+    &:focus {
+      border-color: var(--color-green);
+      outline: none;
+    }
+  }
+}

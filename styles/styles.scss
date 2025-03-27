@@ -6,6 +6,7 @@
 @use "utils";
 @use "globals";
 
+@use "./blocks/field";
 @use "./blocks/burger-button";
 @use "./blocks/grid";
 @use "./blocks/button";
@@ -20,3 +21,6 @@
 @use "./blocks/courses";
 @use "./blocks/about";
 @use "./blocks/reviews";
+@use "./blocks/contact-us";
+@use "./blocks/subscribe-form";
+@use "./blocks/footer";
